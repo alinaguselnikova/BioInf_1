@@ -6,5 +6,6 @@ samtools view -bo output.bam output.sam
 samtools flagstat output.bam > output.txt
 bash parsing.bash
 samtools sort output.bam -o output.sorted.bam
+samtools index output.bam
 freebayes -f ref_ecoli.fna output.sorted.bam > result.vcf
 echo Finished
